@@ -1,0 +1,173 @@
+// Кастомные переменные для легкой настройки
+$card-background: #1e1e1e;
+$text-color: #e0e0e0;
+$text-color-secondary: #a0a0a0;
+$title-color: #ffffff;
+$link-color: #529dff;
+$highlight-color: #4a90e2;
+$highlight-background: rgba(74, 144, 226, 0.15);
+$tag-background: #333333;
+$tag-border-color: #444444;
+$divider-color: #444444;
+$button-default-bg: #333;
+$button-default-border: #555;
+$button-default-color: $text-color;
+
+.news-snippet-card {
+  background-color: $card-background;
+  color: $text-color;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+
+  .ant-card-body {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .snippet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 12px;
+    font-size: 13px;
+
+    .ant-typography {
+      color: $text-color-secondary;
+      &.ant-typography-strong {
+        color: $text-color;
+      }
+    }
+
+    .sentiment-tag {
+      margin-left: 8px;
+    }
+
+    .snippet-actions {
+      .ant-btn-text {
+        color: $text-color-secondary;
+        &:hover {
+          color: $link-color;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+
+  .snippet-title {
+    margin-bottom: 8px !important;
+    .ant-typography-link {
+      color: $title-color;
+      font-weight: 600;
+      font-size: 18px;
+      &:hover {
+        color: lighten($link-color, 10%);
+      }
+    }
+  }
+
+  .snippet-source-info {
+    margin-bottom: 12px;
+    font-size: 13px;
+
+    .ant-space-item {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .ant-avatar.favicon {
+      margin-right: 4px;
+    }
+
+    .ant-typography,
+    .anticon,
+    .react-country-flag {
+      color: $text-color-secondary;
+    }
+
+    .ant-typography-link {
+      color: $text-color-secondary;
+      &:hover {
+        color: $link-color;
+      }
+    }
+
+    .anticon,
+    .react-country-flag {
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+  }
+
+  .snippet-content {
+    color: $text-color;
+    margin-bottom: 16px !important;
+    font-size: 14px;
+    line-height: 1.5;
+
+    .highlighted-keyword {
+      font-weight: bold;
+      color: $highlight-color;
+      background-color: $highlight-background;
+      padding: 0.1em 0.2em;
+      border-radius: 3px;
+      margin: 0 1px;
+    }
+
+    // Стилизация кнопки "Show more" от antd ellipsis
+    .ant-typography-expand {
+      color: $link-color;
+      &:hover {
+        color: lighten($link-color, 10%);
+      }
+    }
+  }
+
+  .snippet-tags {
+    margin-bottom: 16px;
+
+    .keyword-tag {
+      background-color: $tag-background;
+      border-color: $tag-border-color;
+      color: $text-color-secondary;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 12px;
+
+      .ant-typography {
+        color: darken($text-color-secondary, 10%);
+        font-size: 11px;
+      }
+    }
+
+    .show-all-tags-button {
+      padding: 0;
+      height: auto;
+      font-size: 12px;
+      color: $link-color;
+      &:hover {
+        color: lighten($link-color, 10%);
+      }
+    }
+  }
+
+  .snippet-divider {
+    border-top-color: $divider-color;
+    margin: 12px 0;
+  }
+
+  .original-source-button {
+    background-color: $button-default-bg;
+    border-color: $button-default-border;
+    color: $button-default-color;
+    font-size: 13px;
+    &:hover,
+    &:focus {
+      background-color: lighten($button-default-bg, 5%);
+      border-color: lighten($button-default-border, 5%);
+      color: $text-color;
+    }
+  }
+}
