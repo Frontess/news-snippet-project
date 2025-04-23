@@ -8,22 +8,23 @@
 Как установить и запустить
 
 1) Клонируем репозиторий
-
+```bash
 git clone https://github.com/Frontess/news-snippet-app.git
-cd news-snippet-app
-
+```
 2) Устанавливаем зависимости
-
+```bash
 npm install
-
+```
 3) Запускаем локальный сервер
-
+```bash
 npm run dev
+```
 После запуска проект будет доступен по адресу http://localhost:5173/.
 
 4) Сборка проекта
-
+```bash
 npm run build
+```
 Готовые файлы появятся в папке dist/.
 
 Технологии
